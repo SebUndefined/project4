@@ -1,0 +1,3 @@
+seb_undefined_shop_homepage:
+    path:     /
+    defaults: { _controller: SebUndefinedShopBundle:Default:index }
