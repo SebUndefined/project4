@@ -1,0 +1,44 @@
+
+/* Règles de base */
+
+
+html {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Droid Serif', serif;
+}
+h1 {
+    font-size: 2.3em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.8em;
+}
+
+/*Positionnement et mise en forme*/
+.navbar-brand {
+    padding: 0px;
+}
+.navbar-brand>img {
+    height: 100%;
+    padding: 15px;
+    width: auto;
+}
+.example2 .navbar-brand>img {
+    padding: 7px 15px;
+}
+.helper {
+    border: solid 1px;
+    padding-right: 0.7em;
+    padding-left: 0.7em;
+    text-align: justify;
+}
+@media screen and (max-width:750px) {
+
+}
+
+

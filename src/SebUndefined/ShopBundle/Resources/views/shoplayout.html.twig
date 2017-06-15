@@ -1,0 +1,20 @@
+{% extends "::mainlayout.html.twig" %}
+
+{% block title %}
+    Annonces - {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <div class="container-fluid">
+        {#<div id="track">
+            {{ render(controller("SebUndefinedShopBundle:Shop:track")) }}
+        </div>#}
+        <header id="shop" class="text-center">
+            <h1>Musée du Louvre - Réservation</h1>
+        </header>
+    </div>
+    {# Block pour les vues du bundle #}
+    {% block sebundefined_body %}
+    {% endblock %}
+
+{% endblock %}

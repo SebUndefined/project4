@@ -1,0 +1,29 @@
+{# src/SebUndefined/ShopBundle/Resources/views/Advert/index.html.twig #}
+{% extends "SebUndefinedShopBundle::shoplayout.html.twig" %}
+
+{# Define the title of the page #}
+{% block title %}Home - {{ parent() }} {% endblock %}
+
+{% block sebundefined_body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div id="homeForm" class="col-md-8 col-sm-6 col-xs-12">
+                <div class="well">
+                    {{ form(form) }}
+                </div>
+            </div>
+            <div id="homeHelp" class="col-md-4 col-sm-6 col-xs-12">
+                <div class="helper">
+                    <h2>Aide</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut massa lacinia purus ornare dapibus ac eget ipsum. Nunc sed libero egestas, lacinia augue eu, varius neque. Curabitur tempor velit ac elit euismod, eu aliquam ex sagittis. Sed rhoncus ac orci ac cursus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis interdum sollicitudin dui, at venenatis nisl mattis eget. Pellentesque ornare et massa non molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla convallis libero quis enim dapibus pharetra. Vivamus eleifend quam at sem volutpat, in rhoncus nunc vestibulum. Ut diam est, venenatis id justo sit amet, rutrum vulputate enim. Aliquam imperdiet porta venenatis. Integer eleifend nibh eu nisi eleifend, quis dapibus sapien congue. Nunc dapibus, nisl at facilisis tincidunt, mauris metus ultrices quam, sed ornare nulla nisi eget nisl. Etiam imperdiet lacinia nibh ut venenatis. Vestibulum luctus dolor in lobortis ornare.
+
+                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque eget semper risus. Proin accumsan nunc ut dui porta, nec volutpat lectus pulvinar. Mauris a elit sit amet tellus tristique ultricies pellentesque vel tortor. Vestibulum dignissim ex sed ullamcorper mattis. Pellentesque placerat velit eget mattis malesuada. Phasellus vitae euismod sapien, sit amet fermentum augue. Duis dapibus sapien sit amet est tempus, non posuere tellus consectetur. Vivamus tempus, est ut interdum faucibus, dolor nunc tempor nibh, in cursus orci ante sit amet neque. Nam suscipit accumsan ipsum, quis sodales enim faucibus id. Proin dolor justo, lobortis dapibus aliquam eget, elementum quis odio. Etiam est ipsum, placerat nec quam non, pharetra luctus nibh.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+{%  endblock %}
