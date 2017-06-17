@@ -13,14 +13,18 @@ use SebUndefined\ShopBundle\Entity\OrderMuseum;
 use SebUndefined\ShopBundle\Entity\Ticket;
 use SebUndefined\ShopBundle\Form\OrderMuseumType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class ShopController extends Controller
 {
-
-    public function indexAction() {
-        $order = new OrderMuseum();
-        $form = $this->createForm(OrderMuseumType::class, $order);
+    public function indexAction(Request $request) {
+        $formBuilder = $this->get('form.factory')->createBuilder(OrderMuseumType::class);
+        if ($request->isMethod('POST')) {
+            die(var_dump("Prout"));
+        }
+        // Form Generation
+        $form = $formBuilder->getForm();
         return $this->render('SebUndefinedShopBundle:Shop:index.html.twig', array(
             'form' => $form->createView(),
         ));
