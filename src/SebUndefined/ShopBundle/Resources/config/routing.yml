@@ -2,9 +2,9 @@ seb_undefined_shop_homepage:
     path:     /
     defaults: { _controller: SebUndefinedShopBundle:Shop:index }
 
-seb_undefined_shop_ticket:
-    path: /ticket
-    defaults: { _controller: SebUndefinedShopBundle:Shop:ticket }
+seb_undefined_shop_order:
+    path: /order
+    defaults: { _controller: SebUndefinedShopBundle:Shop:order }
 
 seb_undefined_shop_checkout:
     path: /checkout
