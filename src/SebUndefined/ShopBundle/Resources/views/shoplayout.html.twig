@@ -13,6 +13,13 @@
             <h1>Musée du Louvre - Réservation</h1>
         </header>
     </div>
+    {% for flashMessage in app.session.flashbag.get('error') %}
+        <div class="container">
+            <div class="alert alert-warning">
+                {{ flashMessage }}
+            </div>
+        </div>
+    {% endfor %}
     {# Block pour les vues du bundle #}
     {% block sebundefined_body %}
     {% endblock %}

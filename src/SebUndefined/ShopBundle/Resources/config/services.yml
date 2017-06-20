@@ -2,3 +2,5 @@ services:
 #    seb_undefined_shop.example:
 #        class: SebUndefined\ShopBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+    seb_undefined_shop.services.check_date:
+        class: SebUndefined\ShopBundle\Services\CheckDate

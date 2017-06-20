@@ -8,7 +8,6 @@
 
 namespace SebUndefined\ShopBundle\Controller;
 
-
 use SebUndefined\ShopBundle\Entity\OrderMuseum;
 use SebUndefined\ShopBundle\Entity\Ticket;
 use SebUndefined\ShopBundle\Form\HomeType;
@@ -40,6 +39,26 @@ class ShopController extends Controller
 
     public function orderAction(Request $request)
     {
+        //get all values in the session
+        $date = $request->getSession()->get('visitDate');
+        $number = $request->getSession()->get('number');
+        $type = $request->getSession()->get('type');
+
+        $checkDateService = $this->container->get('seb_undefined_shop.services.check_date');
+        $checkDateService->isValidFormat($date);
+        //If to do
+        $dateFormated = \DateTime::createFromFormat('d/m/Y', $date);
+        //Check if the date is not before today
+        if(!$checkDateService->isNotBefore($dateFormated))
+        {
+            $request->getSession()->getFlashBag()->add('error', 'Vous ne pouvez réserver pour une date antérieur');
+            return $this->redirectToRoute('seb_undefined_shop_homepage');
+        }
+        //Check if the Time is ok for full day tickets
+        if(!$checkDateService->checkTypeAndTime($dateFormated, $type)) {
+
+        }
+
         $order = new OrderMuseum();
         $number = $request->getSession()->get('number');
         for ($i=0;$i < $number;$i++)
