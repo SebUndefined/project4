@@ -52,7 +52,7 @@ class Ticket
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="day", type="datetime")
+     * @ORM\Column(name="day", type="date")
      */
     private $day;
 
@@ -64,13 +64,6 @@ class Ticket
     private $discountTicket;
 
     /**
-     * @var bool
-     *
-     * @ORM\Column(name="isApplicant", type="boolean")
-     */
-    private $isApplicant;
-
-    /**
      * @var float
      *
      * @ORM\Column(name="price", type="float")
@@ -80,7 +73,7 @@ class Ticket
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="birthDate", type="datetime")
+     * @ORM\Column(name="birthDate", type="date")
      */
     private $birthDate;
 
@@ -244,29 +237,6 @@ class Ticket
         return $this->discountTicket;
     }
 
-    /**
-     * Set isApplicant
-     *
-     * @param boolean $isApplicant
-     *
-     * @return Ticket
-     */
-    public function setIsApplicant($isApplicant)
-    {
-        $this->isApplicant = $isApplicant;
-
-        return $this;
-    }
-
-    /**
-     * Get isApplicant
-     *
-     * @return bool
-     */
-    public function getIsApplicant()
-    {
-        return $this->isApplicant;
-    }
 
     /**
      * Set price

@@ -4,3 +4,4 @@ services:
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
     seb_undefined_shop.services.check_date:
         class: SebUndefined\ShopBundle\Services\CheckDate
+        arguments: ["@doctrine.orm.default_entity_manager"]

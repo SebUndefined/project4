@@ -10,7 +10,7 @@ $(function() {
         var dateSelected = new Date(splitDate[2], splitDate[1]-1, splitDate[0]);
         if (dateSelected.toDateString() === dateToday.toDateString())
         {
-            if (new Date().getHours() > 8)
+            if (new Date().getHours() > 14)
             {
                 $('#home_type option[value="full"]').attr('disabled', true);
                 $('#home_type option[value="half"]').attr('selected', true);

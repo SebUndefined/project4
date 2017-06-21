@@ -10,4 +10,13 @@ namespace SebUndefined\ShopBundle\Repository;
  */
 class TicketRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function countTicketForDay ($date, $number)
+    {
+        return $this->createQueryBuilder('t')
+            ->select('COUNT(t)')
+            ->where('t.day = :day')
+            ->setParameter('day', $date->format('Y-m-d'))
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 }

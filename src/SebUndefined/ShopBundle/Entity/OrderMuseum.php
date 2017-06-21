@@ -37,7 +37,7 @@ class OrderMuseum
     private $price;
 
     /**
-     * @ORM\OneToMany(targetEntity="SebUndefined\ShopBundle\Entity\Ticket", mappedBy="orderMuseum")
+     * @ORM\OneToMany(targetEntity="SebUndefined\ShopBundle\Entity\Ticket", mappedBy="orderMuseum", cascade="all")
      */
     private $tickets;
 
@@ -67,7 +67,6 @@ class OrderMuseum
     public function setDate($date)
     {
         $this->date = $date;
-
         return $this;
     }
 
