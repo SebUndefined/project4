@@ -38,7 +38,8 @@ class TicketType extends AbstractType
                     'label' => 'Date de naissance'
                 ))
                 ->add('discountTicket', CheckboxType::class, array(
-                    'label' => "Tarif réduit ?"
+                    'label' => "Tarif réduit ?",
+                    'required' => false
                 ));
 
     }

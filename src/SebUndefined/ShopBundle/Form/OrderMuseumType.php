@@ -23,6 +23,7 @@ class OrderMuseumType extends AbstractType
         $builder->add('tickets', CollectionType::class, array(
             'entry_type' => TicketType::class,
             'allow_add' => true,
+            'allow_delete' => true,
             'prototype' => true,
             'by_reference' => false
         ));

@@ -16,9 +16,10 @@ class OrderMuseum
     /**
      * @var int
      *
-     * @ORM\Column(name="id", type="integer")
+     * @ORM\Column(name="id", type="string")
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="CUSTOM")
+     * @ORM\CustomIdGenerator(class="SebUndefined\ShopBundle\Doctrine\RandomIdGenerator")
      */
     private $id;
 
@@ -27,6 +28,7 @@ class OrderMuseum
      *
      * @ORM\Column(name="date", type="datetime")
      */
+
     private $date;
 
     /**
@@ -37,12 +39,28 @@ class OrderMuseum
     private $price;
 
     /**
+     * @return bool
+     */
+    public function isComplete()
+    {
+        return $this->complete;
+    }
+
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="complete", type="boolean")
+     */
+    private $complete;
+    /**
      * @ORM\OneToMany(targetEntity="SebUndefined\ShopBundle\Entity\Ticket", mappedBy="orderMuseum", cascade="all")
      */
     private $tickets;
 
     public function __construct()
     {
+        $this->complete = false;
         $this->date = new  \DateTime();
         $this->tickets = new ArrayCollection();
     }
@@ -81,6 +99,19 @@ class OrderMuseum
     }
 
     /**
+     * @return bool
+     */
+    public function getComplete() {
+        return $this->complete;
+    }
+    /**
+     * @param bool $complete
+     */
+    public function setComplete($complete)
+    {
+        $this->complete = $complete;
+    }
+    /**
      * Set price
      *
      * @param float $price
@@ -90,8 +121,6 @@ class OrderMuseum
     public function setPrice($price)
     {
         $this->price = $price;
-
-        return $this;
     }
 
     /**
@@ -101,7 +130,11 @@ class OrderMuseum
      */
     public function getPrice()
     {
-        return $this->price;
+        $price=0;
+        foreach ($this->getTickets() as $ticket) {
+            $price += $ticket->getPrice();
+        }
+        return $price;
     }
 
     public function addTicket(Ticket $ticket) {
