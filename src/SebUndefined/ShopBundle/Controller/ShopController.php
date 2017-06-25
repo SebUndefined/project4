@@ -12,6 +12,11 @@ use SebUndefined\ShopBundle\Entity\OrderMuseum;
 use SebUndefined\ShopBundle\Entity\Ticket;
 use SebUndefined\ShopBundle\Form\HomeType;
 use SebUndefined\ShopBundle\Form\OrderMuseumType;
+use SebUndefined\ShopBundle\Stripe\ConfigStripe;
+use Stripe\Charge;
+use Stripe\Customer;
+use Stripe\Error\Card;
+use Stripe\Stripe;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -128,8 +133,38 @@ class ShopController extends Controller
         $orderNumber = $request->getSession()->get('orderNumber');
         $repo = $this->getDoctrine()->getManager()->getRepository('SebUndefinedShopBundle:OrderMuseum');
         $order = $repo->find($orderNumber);
-        die(var_dump($order->getPrice()));
-        return 'bla';
+
+        return $this->render('@SebUndefinedShop/Shop/checkout.html.twig', array(
+            'order' => $order,
+        ));
+    }
+
+    public function finalAction(Request $request) {
+        if( !$request->getSession()->get('orderNumber')) {
+            return $this->redirectToRoute('seb_undefined_shop_homepage');
+        }
+        $orderNumber = $request->getSession()->get('orderNumber');
+        $repo = $this->getDoctrine()->getManager()->getRepository('SebUndefinedShopBundle:OrderMuseum');
+        $order = $repo->find($orderNumber);
+
+        $stripeConfig = new ConfigStripe();
+        Stripe::setApiKey($stripeConfig->getPrivKey());
+        $theToken = $_POST['stripeToken'];
+        $email = $_POST['stripeEmail'];
+        $customer = Customer::create(array(
+            'email'=> $email,
+            'source' => $theToken
+        ));
+        try {
+            Charge::create(array(
+                'customer' =>$customer->id,
+                'amount' => $order->getPrice() * 100,
+                'currency' => 'eur'
+            ));
+            return $this->render('@SebUndefinedShop/Shop/final.html.twig');
+        }catch (Card $exception) {
+            return "nope...";
+        }
     }
     public function trackAction() {
         return $this->render('SebUndefinedShopBundle:Shop:track.html.twig');

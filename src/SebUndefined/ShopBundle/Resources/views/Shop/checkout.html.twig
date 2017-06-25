@@ -1,0 +1,75 @@
+{# src/SebUndefined/ShopBundle/Resources/views/Advert/index.html.twig #}
+{% extends "SebUndefinedShopBundle::shoplayout.html.twig" %}
+
+{# Define the title of the page #}
+{% block title %}Checkout - {{ parent() }} {% endblock %}
+
+{% block sebundefined_body %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                <h2>Récapitulatif de votre commande</h2>
+                <h3>Information de votre commande</h3>
+                <ul>
+                    <li>Identifiant de commande: {{ order.id }}</li>
+                    <li>Date de commande: {{ order.date|date("d/m/Y") }}</li>
+                    <li>Nombre de billet : {{ order.tickets| length }}</li>
+                </ul>
+                <h3>Liste des billets</h3>
+                {% for ticket in order.tickets %}
+                    <div class="well">
+                        <div class="table-responsive">
+                            <table class="table table-bordered recap-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Prénom</td>
+                                        <td>{{ ticket.firstname }}</td>
+                                    <tr>
+                                        <td>Nom</td>
+                                        <td>{{ ticket.lastname }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Date de naissance</td>
+                                        <td>{{ ticket.birthdate|date("d/m/Y")  }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pays</td>
+                                        <td>{{ ticket.country }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tarif réduit ?</td>
+                                        <td>{% if ticket.discountticket %}
+                                                Oui <p><small>Une pièce justificative vous sera demandée</small></p>
+                                            {% else %}
+                                                Non
+                                            {% endif%}
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prix</td>
+                                        <td>{{ ticket.price }} €</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <form action="{{ path('seb_undefined_shop_final') }}" method="POST">
+                    <script
+                            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                            data-key="pk_test_5MXU6aHa9Fg21xKR94SAJEuF"
+                            data-amount="{{ order.price * 100 }}"
+                            data-name="oc-stripe"
+                            data-description="Widget"
+                            data-locale="auto"
+                            data-currency="eur">
+                    </script>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

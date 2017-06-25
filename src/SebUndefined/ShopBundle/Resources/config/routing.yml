@@ -9,3 +9,7 @@ seb_undefined_shop_order:
 seb_undefined_shop_checkout:
     path: /checkout
     defaults: { _controller: SebUndefinedShopBundle:Shop:checkout }
+
+seb_undefined_shop_final:
+    path: /final
+    defaults: { _controller: SebUndefinedShopBundle:Shop:final }
