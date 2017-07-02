@@ -4,6 +4,7 @@ namespace SebUndefined\ShopBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Constraint;
 
 /**
  * OrderMuseum
@@ -27,6 +28,7 @@ class OrderMuseum
      * @var \DateTime
      *
      * @ORM\Column(name="date", type="datetime")
+     * @Constraint\DateTime()
      */
 
     private $date;
@@ -35,17 +37,9 @@ class OrderMuseum
      * @var float
      *
      * @ORM\Column(name="price", type="float")
+     * @Constraint\GreaterThan(0)
      */
     private $price;
-
-    /**
-     * @return bool
-     */
-    public function isComplete()
-    {
-        return $this->complete;
-    }
-
 
     /**
      * @var boolean
@@ -53,6 +47,13 @@ class OrderMuseum
      * @ORM\Column(name="complete", type="boolean")
      */
     private $complete;
+
+    /**
+     * @var string
+     * @ORM\Column(name="email", type="string", length=255)
+     * @Constraint\Email()
+     */
+    private $email;
     /**
      * @ORM\OneToMany(targetEntity="SebUndefined\ShopBundle\Entity\Ticket", mappedBy="orderMuseum", cascade="all")
      */
@@ -137,6 +138,22 @@ class OrderMuseum
         return $price;
     }
 
+    /**
+     * @return string
+     */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    /**
+     * @param string $email
+     */
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
     public function addTicket(Ticket $ticket) {
         $this->tickets[] = $ticket;
     }
@@ -145,6 +162,13 @@ class OrderMuseum
     }
     public function getTickets() {
         return $this->tickets;
+    }
+    /**
+     * @return bool
+     */
+    public function isComplete()
+    {
+        return $this->complete;
     }
 }
 

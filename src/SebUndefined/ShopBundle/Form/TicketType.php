@@ -25,10 +25,18 @@ class TicketType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('firstName', TextType::class, array(
-                    'label' => "Prénom"
+                    'label' => "Prénom",
+                    'attr' => array(
+                        'pattern' => '[a-zA-Z0-9]{2,255}$',
+                        'title' => "Le prénom doit comporter au minimum 2 lettres et au maximum 255",
+                    )
                 ))
                 ->add('lastName', TextType::class, array(
-                    'label' => "Nom"
+                    'label' => "Nom",
+                    'attr' => array(
+                        'pattern' => '[a-zA-Z0-9]{2,255}$',
+                        'title' => "Le nom doit comporter au minimum 2 lettres et au maximum 255"
+                    )
                 ))
                 ->add('country', CountryType::class, array(
                     'label' => "Pays"

@@ -3,6 +3,7 @@
 namespace SebUndefined\ShopBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Constraint;
 
 /**
  * Ticket
@@ -25,6 +26,10 @@ class Ticket
      * @var string
      *
      * @ORM\Column(name="firstName", type="string", length=255)
+     * @Constraint\Length(min=2,
+     *     minMessage="Le prénom doit comporter au moins deux caractères",
+     *     max=255,
+     *     maxMessage="Le prénom ne peux pas excéder 255 caractères")
      */
     private $firstName;
 
@@ -32,6 +37,10 @@ class Ticket
      * @var string
      *
      * @ORM\Column(name="lastName", type="string", length=255)
+     * @Constraint\Length(min=2,
+     *     minMessage="Le nom doit comporter au moins deux caractères",
+     *     max=255,
+     *     maxMessage="Le nom ne peux pas excéder 255 caractères")
      */
     private $lastName;
 
@@ -39,6 +48,7 @@ class Ticket
      * @var string
      *
      * @ORM\Column(name="country", type="string", length=255)
+     * @Constraint\Country()
      */
     private $country;
 
@@ -46,13 +56,17 @@ class Ticket
      * @var string
      *
      * @ORM\Column(name="type", type="string", length=100)
+     * @Constraint\Choice(
+     *     choices = { "full", "half" },
+     *     message = "Choisissez un type valide"
+     * )
      */
     private $type;
 
     /**
      * @var \DateTime
-     *
      * @ORM\Column(name="day", type="date")
+     * @Constraint\DateTime()
      */
     private $day;
 
@@ -65,14 +79,13 @@ class Ticket
 
     /**
      * @var float
-     *
      * @ORM\Column(name="price", type="float")
+     * @Constraint\GreaterThan(0)
      */
     private $price;
 
     /**
      * @var \DateTime
-     *
      * @ORM\Column(name="birthDate", type="date")
      */
     private $birthDate;

@@ -62,9 +62,10 @@
                             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                             data-key="pk_test_5MXU6aHa9Fg21xKR94SAJEuF"
                             data-amount="{{ order.price * 100 }}"
-                            data-name="oc-stripe"
-                            data-description="Widget"
+                            data-name="Paiement"
+                            data-description="Vous recevrez un email à l'adresse"
                             data-locale="auto"
+                            data-email="{{ order.email }}"
                             data-currency="eur">
                     </script>
                 </form>

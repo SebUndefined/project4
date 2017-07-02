@@ -64,6 +64,10 @@ class ShopController extends Controller
                     $request->getSession()->getFlashBag()->add('error', 'Pas assez de place disponible pour ce jour');
                     return $this->redirectToRoute('seb_undefined_shop_homepage');
                 }
+                if ($number < 1 || $number > 50) {
+                    $request->getSession()->getFlashBag()->add('error', 'Impossible de commander ce nombre de billet');
+                    return $this->redirectToRoute('seb_undefined_shop_homepage');
+                }
                 $session->set('visitDate', $dateFormated);
                 $session->set('number', $dataForm['number']);
                 $session->set('type', $dataForm['type']);
@@ -84,7 +88,6 @@ class ShopController extends Controller
         $type = $request->getSession()->get('type');
         //Create new Order
         $order = new OrderMuseum();
-        $number = $request->getSession()->get('number');
         for ($i=0;$i < $number;$i++)
         {
             $ticket = new Ticket();
@@ -109,7 +112,7 @@ class ShopController extends Controller
                                 ->get($i)->getBirthdate(),
                                 $type,
                                 $order->getTickets()
-                                ->get($i)->getDiscountTicket() )
+                                ->get($i)->getDiscountTicket())
                     );
             }
             $order->setPrice($order->getPrice());
