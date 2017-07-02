@@ -8,9 +8,45 @@
     <div class="container-fluid">
         <div class="row">
             <div id="homeForm" class="col-md-8 col-sm-6 col-xs-12">
+
+                {{ form_start(form) }}
                 <div class="well">
-                    {{ form(form) }}
+                    <div class="alert alert-info">
+                        <strong>Information</strong> Cette adresse email nous servira à vous envoyer votre confirmation de paiment ainsi que vos billets !
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.email, "Votre adresse email", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        {{ form_errors(form.email) }}
+                        <div class="col-sm-9">
+                            {{ form_widget(form.email) }}
+                        </div>
+                    </div>
                 </div>
+
+                {% for ticket in form.tickets %}
+                    <div class="well">
+                        {{ form_label(ticket.firstName, "Prénom", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        {{ form_errors(ticket.firstName) }}
+                        {{ form_widget(ticket.firstName) }}
+                        {{ form_label(ticket.lastName, "Nom", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        {{ form_errors(ticket.lastName) }}
+                        {{ form_widget(ticket.lastName) }}
+                        {{ form_label(ticket.birthDate, "Date de naissance", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        {{ form_errors(ticket.birthDate) }}
+                        {{ form_widget(ticket.birthDate) }}
+                        {{ form_label(ticket.country, "Pays", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        {{ form_errors(ticket.country) }}
+                        {{ form_widget(ticket.country) }}
+                        {{ form_label(ticket.discountTicket, "Tarif réduit ?", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+                        {{ form_errors(ticket.discountTicket) }}
+                        {{ form_widget(ticket.discountTicket) }}
+                    </div>
+                {% endfor %}
+                   <div class="form-group">
+
+                   </div>
+                    {{ form_end(form) }}
+
             </div>
         </div>
     </div>
