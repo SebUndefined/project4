@@ -164,6 +164,8 @@ class ShopController extends Controller
                 'amount' => $order->getPrice() * 100,
                 'currency' => 'eur'
             ));
+            $serviceMail = $this->get("seb_undefined_shop.services.mailer");
+            $serviceMail->sendEmail($order);
             return $this->render('@SebUndefinedShop/Shop/final.html.twig');
         }catch (Card $exception) {
             return "nope...";

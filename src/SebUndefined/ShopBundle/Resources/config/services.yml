@@ -8,4 +8,8 @@ services:
     seb_undefined_shop.services.define_price:
         class: SebUndefined\ShopBundle\Services\DefinePrice
 
+    seb_undefined_shop.services.mailer:
+        class: SebUndefined\ShopBundle\Services\Mailer
+        arguments: ["@mailer"]
+
 
