@@ -14,12 +14,13 @@ use SebUndefined\ShopBundle\Entity\OrderMuseum;
 class Mailer
 {
 
-    public function sendEmail(OrderMuseum $order) {
-        $message = \Swift_Message::newInstance()
-            ->setSubject("Votre commande - Musee du Louvre")
-            ->setFrom("no-reply@sebundefined.fr")
-            ->setTo($order->getEmail())
-            ->setBody("test");
-        $this->mailer->send($message);
+
+    public function sendEmail(OrderMuseum $order, \Swift_Mailer $mailer) {
+        $message = new \Swift_Message("Sujet");
+        $message->setFrom("louvreproject4@gmail.com");
+        $message->setTo($order->getEmail());
+        $message->setBody("testdemail");
+
+        $mailer->send($message);
     }
 }
