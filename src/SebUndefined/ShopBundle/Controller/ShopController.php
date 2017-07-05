@@ -147,7 +147,8 @@ class ShopController extends Controller
             return $this->redirectToRoute('seb_undefined_shop_homepage');
         }
         $orderNumber = $request->getSession()->get('orderNumber');
-        $repo = $this->getDoctrine()->getManager()->getRepository('SebUndefinedShopBundle:OrderMuseum');
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository('SebUndefinedShopBundle:OrderMuseum');
         $order = $repo->find($orderNumber);
 
         $stripeConfig = new ConfigStripe();
@@ -165,7 +166,10 @@ class ShopController extends Controller
                 'currency' => 'eur'
             ));
             $serviceMail = $this->get("seb_undefined_shop.services.mailer");
+            $order->setComplete(true);
+            $em->flush();
             $serviceMail->sendEmail($order, $this->get('mailer'));
+            $request->getSession()->remove("orderNumber");
             return $this->render('@SebUndefinedShop/Shop/final.html.twig');
         }catch (Card $exception) {
             return "nope...";
