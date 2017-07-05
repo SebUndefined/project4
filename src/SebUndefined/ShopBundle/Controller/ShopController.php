@@ -168,7 +168,7 @@ class ShopController extends Controller
             $serviceMail = $this->get("seb_undefined_shop.services.mailer");
             $order->setComplete(true);
             $em->flush();
-            $serviceMail->sendEmail($order, $this->get('mailer'));
+            $serviceMail->sendEmail($order);
             $request->getSession()->remove("orderNumber");
             return $this->render('@SebUndefinedShop/Shop/final.html.twig');
         }catch (Card $exception) {

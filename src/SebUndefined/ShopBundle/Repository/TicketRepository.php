@@ -16,6 +16,7 @@ class TicketRepository extends \Doctrine\ORM\EntityRepository
             ->select('COUNT(t)')
             ->where('t.day = :day')
             ->setParameter('day', $date->format('Y-m-d'))
+            //->setParameter('isComplete', false)
             ->getQuery()
             ->getSingleScalarResult();
     }

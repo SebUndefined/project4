@@ -10,17 +10,36 @@ namespace SebUndefined\ShopBundle\Services;
 
 
 use SebUndefined\ShopBundle\Entity\OrderMuseum;
+use Symfony\Component\Templating\EngineInterface;
 
 class Mailer
 {
+    private $mailer;
+    private  $templating;
 
 
-    public function sendEmail(OrderMuseum $order, \Swift_Mailer $mailer) {
+    /**
+     * Mailer constructor.
+     * @param \Swift_Mailer $mailer
+     */
+    public function __construct(\Swift_Mailer $mailer, EngineInterface $templating)
+    {
+        $this->mailer = $mailer;
+        $this->templating = $templating;
+
+    }
+
+    public function sendEmail(OrderMuseum $order) {
         $message = new \Swift_Message("Sujet");
         $message->setFrom("louvreproject4@gmail.com");
         $message->setTo($order->getEmail());
-        $message->setBody("testdemail");
+        $message->setBody(
+            $this->templating->render(
+                '@SebUndefinedShop/Shop/email.html.twig',
+                array('order', $order),
+                'text/html')
+        );
 
-        $mailer->send($message);
+        $this->mailer->send($message);
     }
 }

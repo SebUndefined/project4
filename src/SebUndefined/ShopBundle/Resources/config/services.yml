@@ -10,6 +10,8 @@ services:
 
     seb_undefined_shop.services.mailer:
         class: SebUndefined\ShopBundle\Services\Mailer
-        arguments: ["@mailer"]
+        arguments:
+            - "@mailer"
+            - "@templating"
 
 

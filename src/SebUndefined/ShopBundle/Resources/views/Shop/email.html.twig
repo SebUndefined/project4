@@ -1,0 +1,30 @@
+{# src/OC/PlatformBundle/Resources/views/layout.html.twig #}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Musée du Louvre{% endblock %}</title>
+    {% block stylesheets %}
+        {# On charge le CSS de bootstrap depuis le site directement #}
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% endblock %}
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid example2">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Logo" src="{{ asset('assets/img/logo-louvre.jpg') }}">
+                </a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<h1>Prout</h1>
+
+</body>
