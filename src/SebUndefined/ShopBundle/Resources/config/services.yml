@@ -12,6 +12,6 @@ services:
         class: SebUndefined\ShopBundle\Services\Mailer
         arguments:
             - "@mailer"
-            - "@templating"
+            - "@twig"
 
 

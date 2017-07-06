@@ -21,6 +21,7 @@ class Mailer
     /**
      * Mailer constructor.
      * @param \Swift_Mailer $mailer
+     * @param EngineInterface $templating
      */
     public function __construct(\Swift_Mailer $mailer, EngineInterface $templating)
     {
@@ -29,16 +30,20 @@ class Mailer
 
     }
 
+    /**
+     * @param OrderMuseum $order
+     */
     public function sendEmail(OrderMuseum $order) {
         $message = new \Swift_Message("Sujet");
         $message->setFrom("louvreproject4@gmail.com");
         $message->setTo($order->getEmail());
+        $message->setSubject("Musée du Louvre - Votre Commande");
         $message->setBody(
             $this->templating->render(
                 '@SebUndefinedShop/Shop/email.html.twig',
-                array('order', $order),
-                'text/html')
+                array('order', $order))
         );
+        $message->setContentType('text/html');
 
         $this->mailer->send($message);
     }
