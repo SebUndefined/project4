@@ -23,7 +23,7 @@ class Mailer
      * @param \Swift_Mailer $mailer
      * @param EngineInterface $templating
      */
-    public function __construct(\Swift_Mailer $mailer, EngineInterface $templating)
+    public function __construct(\Swift_Mailer $mailer, \Twig_Environment $templating)
     {
         $this->mailer = $mailer;
         $this->templating = $templating;
@@ -41,7 +41,7 @@ class Mailer
         $message->setBody(
             $this->templating->render(
                 '@SebUndefinedShop/Shop/email.html.twig',
-                array('order', $order))
+                array('order' => $order))
         );
         $message->setContentType('text/html');
 

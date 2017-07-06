@@ -19,7 +19,7 @@
 <body>
 
 <div style="width: 600px;height: 200px; margin: auto;">
-    <h1 align="center">Votre commande numéro </h1>
+    <h2 align="center">Votre commande numéro {{ order.id }}</h2>
     <p style="text-align: justify">
         Bonjour,<br/>
         Merci pour votre commande ! Par ce mail nous accusons réception de cette dernière. Vous trouverez ci-dessous
@@ -35,22 +35,19 @@
             Numéro de commande : {{ order.price }}
         </li>
         <li>
-            Date de la commande :
+            Date de la commande : {{ order.date }}
         </li>
         <li>
-            Type de billet :
+            Prix total : {{ order.price }}
         </li>
         <li>
-            Prix total :
-        </li>
-        <li>
-            Adresse email :
+            Adresse email : {{ order.email }}
         </li>
     </ul>
     <table width="100%">
         <tr>
             <th>
-                <h4>Billet numéro: </h4>
+                <h4>Billet numéro: {{ order.id }} </h4>
             </th>
         </tr>
         <tr>
