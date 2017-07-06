@@ -35,35 +35,43 @@
             Numéro de commande : {{ order.price }}
         </li>
         <li>
-            Date de la commande : {{ order.date }}
+            Date de la commande : {{ order.date|date("d/m/Y") }}
         </li>
         <li>
-            Prix total : {{ order.price }}
+            Prix total : {{ order.price }} €
         </li>
         <li>
             Adresse email : {{ order.email }}
         </li>
     </ul>
     <table width="100%">
+        <h3>Liste des billets</h3>
+        {% for ticket in order.tickets %}
         <tr>
             <th>
-                <h4>Billet numéro: {{ order.id }} </h4>
+                <h4>Billet numéro: {{ ticket.id }} </h4>
             </th>
         </tr>
         <tr>
             <td>
 
-                Nom : <br/>
-                Prénom : <br/>
-                Date de naissance : <br/>
-                Pays : <br/>
+                Nom : {{ ticket.lastname }}<br/>
+                Prénom : {{ ticket.lastname }}<br/>
+                Date de naissance : {{ ticket.birthdate|date("d/m/Y") }}<br/>
+                Pays : {{ ticket.country }}<br/>
             </td>
             <td>
-                Type : <br/>
-                Tarif réduit : <br/>
-                Prix : <br/>
+                Type : {{ ticket.type }}<br/>
+                Tarif réduit :
+                {% if ticket.discountticket %}
+                    Oui <p><small>Une pièce justificative vous sera demandée</small></p>
+                {% else %}
+                    Non
+                {% endif%}<br/>
+                Prix : {{ ticket.price }} €<br/>
             </td>
         </tr>
+        {% endfor %}
     </table>
 </div>
 </body>
