@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db301c1f-636f-40da-ab33-1811ea3287e1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Controller/ShopController.php" afterPath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Controller/ShopController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Form/TicketType.php" afterPath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Form/TicketType.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/checkout.html.twig" afterPath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/checkout.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/email.html.twig" afterPath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/email.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/final.html.twig" afterPath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/final.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/index.html.twig" afterPath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/index.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/order.html.twig" afterPath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/order.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/shoplayout.html.twig" afterPath="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/shoplayout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" afterPath="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -35,40 +28,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="final.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/final.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="19" column="95" lean-forward="false" selection-start-line="19" selection-start-column="95" selection-end-line="19" selection-end-column="95" />
-              <folding>
-                <element signature="e#85#129#0#Twig" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ShopController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Controller/ShopController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1438">
-              <caret line="86" column="73" lean-forward="false" selection-start-line="86" selection-start-column="73" selection-end-line="86" selection-end-column="73" />
+            <state relative-caret-position="453">
+              <caret line="42" column="81" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="81" />
               <folding>
-                <element signature="e#1490#1519#1#PHP" expanded="false" />
-                <element signature="e#1984#2013#1#PHP" expanded="false" />
-                <element signature="e#2359#2388#1#PHP" expanded="false" />
-                <element signature="e#2770#2799#1#PHP" expanded="false" />
-                <element signature="e#3114#3143#1#PHP" expanded="false" />
-                <element signature="e#3385#3414#1#PHP" expanded="false" />
-                <element signature="e#3660#3686#1#PHP" expanded="false" />
-                <element signature="e#3769#3814#0#PHP" expanded="false" />
-                <element signature="e#4080#4109#1#PHP" expanded="false" />
-                <element signature="e#5954#5983#1#PHP" expanded="false" />
-                <element signature="e#6040#6085#0#PHP" expanded="false" />
-                <element signature="e#6312#6341#1#PHP" expanded="false" />
-                <element signature="e#6600#6643#0#PHP" expanded="false" />
-                <element signature="e#6855#6884#1#PHP" expanded="false" />
-                <element signature="e#7913#7953#1#PHP" expanded="false" />
-                <element signature="e#8102#8147#1#PHP" expanded="false" />
+                <element signature="e#6487#6523#1#PHP" expanded="true" />
+                <element signature="e#7049#7085#1#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,7 +44,7 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
+            <state relative-caret-position="1116">
               <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="82" />
               <folding>
                 <element signature="e#85#129#0#Twig" expanded="false" />
@@ -86,81 +53,43 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/order.html.twig">
+      <file leaf-file-name="DefaultControllerTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="68" column="78" lean-forward="false" selection-start-line="68" selection-start-column="78" selection-end-line="68" selection-end-column="78" />
+            <state relative-caret-position="636">
+              <caret line="48" column="32" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
               <folding>
-                <element signature="e#85#129#0#Twig" expanded="false" />
+                <element signature="e#46#93#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="email.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/email.html.twig">
+      <file leaf-file-name="CheckDate.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Services/CheckDate.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="79" column="58" lean-forward="false" selection-start-line="79" selection-start-column="58" selection-end-line="79" selection-end-column="58" />
-              <folding>
-                <element signature="n#style#0;n#p#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ticket.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Entity/Ticket.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="90" column="13" lean-forward="false" selection-start-line="90" selection-start-column="13" selection-end-line="90" selection-end-column="22" />
+            <state relative-caret-position="512">
+              <caret line="70" column="44" lean-forward="false" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="emailtest.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/emailtest.html">
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="698">
-              <caret line="72" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="7" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkout.html.twig" pinned="false" current-in-tab="true">
+      <file leaf-file-name="checkout.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/checkout.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1256">
+            <state relative-caret-position="1860">
               <caret line="60" column="70" lean-forward="false" selection-start-line="60" selection-start-column="70" selection-end-line="60" selection-end-column="70" />
-              <folding>
-                <element signature="e#85#129#0#Twig" expanded="false" />
-                <element signature="e#3404#3428#0#Twig" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="977">
-              <caret line="71" column="26" lean-forward="false" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderMuseumType.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Form/OrderMuseumType.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -201,7 +130,6 @@
         <option value="$PROJECT_DIR$/src/SebUndefined/CheckDate/SebUndefinedCheckDate.php" />
         <option value="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Checkdate/SebUndefinedCheckDate.php" />
         <option value="$PROJECT_DIR$/src/SebUndefined/ShopBundle/CheckDate/SebUndefinedCheckDate.php" />
-        <option value="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/shoplayout.html.twig" />
         <option value="$PROJECT_DIR$/web/assets/js/script.js" />
         <option value="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Services/CheckDate.php" />
         <option value="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Doctrine/RandomIdGenerator.php" />
@@ -225,6 +153,8 @@
         <option value="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/email.html.twig" />
         <option value="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/index.html.twig" />
         <option value="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/order.html.twig" />
+        <option value="$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/shoplayout.html.twig" />
+        <option value="$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php" />
       </list>
     </option>
   </component>
@@ -398,7 +328,63 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project4" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SebUndefined" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShopBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Services" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project4" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SebUndefined" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ShopBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -593,12 +579,12 @@
       <workItem from="1499271383142" duration="2733000" />
       <workItem from="1499279713722" duration="2132000" />
       <workItem from="1499360548263" duration="6194000" />
-      <workItem from="1499580057621" duration="5134000" />
+      <workItem from="1499580057621" duration="10317000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126519000" />
+    <option name="totallyTimeSpent" value="131702000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -611,6 +597,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="105" y="4" width="2456" height="1437" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25484416" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297785" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -619,7 +606,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32895815" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20508614" sideWeight="0.49831507" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20508614" sideWeight="0.49831507" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -642,14 +629,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Entity/Ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2697">
-          <caret line="87" column="100" lean-forward="false" selection-start-line="87" selection-start-column="100" selection-end-line="87" selection-end-column="100" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Entity/OrderMuseum.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -774,23 +753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/shoplayout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Services/CheckDate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="633">
-          <caret line="70" column="44" lean-forward="false" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
-          <folding>
-            <element signature="e#132#163#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Doctrine/RandomIdGenerator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
@@ -886,13 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/config/services.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
@@ -927,14 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/mainlayout.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="108" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="977">
@@ -956,8 +903,8 @@
         <state relative-caret-position="698">
           <caret line="72" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -974,34 +921,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="19" column="95" lean-forward="false" selection-start-line="19" selection-start-column="95" selection-end-line="19" selection-end-column="95" />
-          <folding>
-            <element signature="e#85#129#0#Twig" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Controller/ShopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1438">
-          <caret line="86" column="73" lean-forward="false" selection-start-line="86" selection-start-column="73" selection-end-line="86" selection-end-column="73" />
-          <folding>
-            <element signature="e#1490#1519#1#PHP" expanded="false" />
-            <element signature="e#1984#2013#1#PHP" expanded="false" />
-            <element signature="e#2359#2388#1#PHP" expanded="false" />
-            <element signature="e#2770#2799#1#PHP" expanded="false" />
-            <element signature="e#3114#3143#1#PHP" expanded="false" />
-            <element signature="e#3385#3414#1#PHP" expanded="false" />
-            <element signature="e#3660#3686#1#PHP" expanded="false" />
-            <element signature="e#3769#3814#0#PHP" expanded="false" />
-            <element signature="e#4080#4109#1#PHP" expanded="false" />
-            <element signature="e#5954#5983#1#PHP" expanded="false" />
-            <element signature="e#6040#6085#0#PHP" expanded="false" />
-            <element signature="e#6312#6341#1#PHP" expanded="false" />
-            <element signature="e#6600#6643#0#PHP" expanded="false" />
-            <element signature="e#6855#6884#1#PHP" expanded="false" />
-            <element signature="e#7913#7953#1#PHP" expanded="false" />
-            <element signature="e#8102#8147#1#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,17 +930,7 @@
         <state relative-caret-position="732">
           <caret line="79" column="58" lean-forward="false" selection-start-line="79" selection-start-column="58" selection-end-line="79" selection-end-column="58" />
           <folding>
-            <element signature="n#style#0;n#p#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="82" />
-          <folding>
-            <element signature="e#85#129#0#Twig" expanded="false" />
+            <element signature="n#style#0;n#p#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1029,19 +939,77 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
           <caret line="68" column="78" lean-forward="false" selection-start-line="68" selection-start-column="78" selection-end-line="68" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="82" />
           <folding>
             <element signature="e#85#129#0#Twig" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/mainlayout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/shoplayout.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="21" column="16" lean-forward="true" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Resources/views/Shop/checkout.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1256">
+        <state relative-caret-position="1860">
           <caret line="60" column="70" lean-forward="false" selection-start-line="60" selection-start-column="70" selection-end-line="60" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Controller/ShopController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="42" column="81" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="81" />
           <folding>
-            <element signature="e#85#129#0#Twig" expanded="false" />
-            <element signature="e#3404#3428#0#Twig" expanded="false" />
+            <element signature="e#6487#6523#1#PHP" expanded="true" />
+            <element signature="e#7049#7085#1#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SebUndefined/ShopBundle/Services/CheckDate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="70" column="44" lean-forward="false" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/AppBundle/Controller/DefaultControllerTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="48" column="32" lean-forward="false" selection-start-line="48" selection-start-column="32" selection-end-line="48" selection-end-column="32" />
+          <folding>
+            <element signature="e#46#93#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
