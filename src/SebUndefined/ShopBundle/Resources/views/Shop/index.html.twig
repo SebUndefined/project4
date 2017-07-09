@@ -34,7 +34,7 @@
                     </div>
                     <div class="form-group text-right">
                         <div class="col-sm-12">
-                            {{ form_widget(form.submit) }}
+                            {{ form_widget(form.submit, { 'label': 'Suivant' }) }}
                         </div>
                     </div>
                     {{ form_end(form) }}
@@ -44,11 +44,37 @@
                 <div class="helper">
                     <h2>Aide</h2>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut massa lacinia purus ornare dapibus ac eget ipsum. Nunc sed libero egestas, lacinia augue eu, varius neque. Curabitur tempor velit ac elit euismod, eu aliquam ex sagittis. Sed rhoncus ac orci ac cursus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis interdum sollicitudin dui, at venenatis nisl mattis eget. Pellentesque ornare et massa non molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla convallis libero quis enim dapibus pharetra. Vivamus eleifend quam at sem volutpat, in rhoncus nunc vestibulum. Ut diam est, venenatis id justo sit amet, rutrum vulputate enim. Aliquam imperdiet porta venenatis. Integer eleifend nibh eu nisi eleifend, quis dapibus sapien congue. Nunc dapibus, nisl at facilisis tincidunt, mauris metus ultrices quam, sed ornare nulla nisi eget nisl. Etiam imperdiet lacinia nibh ut venenatis. Vestibulum luctus dolor in lobortis ornare.
-
-                        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque eget semper risus. Proin accumsan nunc ut dui porta, nec volutpat lectus pulvinar. Mauris a elit sit amet tellus tristique ultricies pellentesque vel tortor. Vestibulum dignissim ex sed ullamcorper mattis. Pellentesque placerat velit eget mattis malesuada. Phasellus vitae euismod sapien, sit amet fermentum augue. Duis dapibus sapien sit amet est tempus, non posuere tellus consectetur. Vivamus tempus, est ut interdum faucibus, dolor nunc tempor nibh, in cursus orci ante sit amet neque. Nam suscipit accumsan ipsum, quis sodales enim faucibus id. Proin dolor justo, lobortis dapibus aliquam eget, elementum quis odio. Etiam est ipsum, placerat nec quam non, pharetra luctus nibh.
+                        Bienvenue sur le système de réservation du musée du Louvre.
                     </p>
-
+                    <p>
+                        Rappel sur les conditions de réservation:
+                    </p>
+                    <p>
+                        <strong>Date de votre visite:</strong> vous pouvez réserver pour une date donnée. Il est impossible
+                        de réserver le mardi et le dimanche. Les jours fériés suivants sont également exclues :
+                        <ul>
+                            <li>
+                                1<sup>er</sup> mai
+                            </li>
+                            <li>
+                                1<sup>er</sup> novembre
+                            </li>
+                            <li>
+                                25 décembre
+                            </li>
+                        </ul>
+                        Naturellement, il est impossible de réserver pour une date antérieure.
+                    </p>
+                    <p>
+                        <strong>Nombre de billet:</strong> vous pouvez réserver entre 1 et 50 billets.
+                    </p>
+                    <p>
+                        <strong>Nombre de billet:</strong> vous pouvez réserver entre 1 et 50 billets.
+                    </p>
+                    <p>
+                        <strong>Type de billet : </strong> Journée ou demi-journée. Ce dernier vous permet de rentrer à partir
+                        de 14H le jour de votre visite.
+                    </p>
                 </div>
 
             </div>

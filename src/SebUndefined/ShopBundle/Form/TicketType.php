@@ -27,14 +27,14 @@ class TicketType extends AbstractType
         $builder->add('firstName', TextType::class, array(
                     'label' => "Prénom",
                     'attr' => array(
-                        'pattern' => '[a-zA-Z0-9]{2,255}$',
+                        'pattern' => '{2,255}$',
                         'title' => "Le prénom doit comporter au minimum 2 lettres et au maximum 255",
                     )
                 ))
                 ->add('lastName', TextType::class, array(
                     'label' => "Nom",
                     'attr' => array(
-                        'pattern' => '[a-zA-Z0-9]{2,255}$',
+                        'pattern' => '{2,255}$',
                         'title' => "Le nom doit comporter au minimum 2 lettres et au maximum 255"
                     )
                 ))

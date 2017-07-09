@@ -83,6 +83,9 @@ class ShopController extends Controller
     public function orderAction(Request $request)
     {
         //get all values in the session
+        if (!$request->getSession()->get('visitDate')) {
+            return $this->redirectToRoute('seb_undefined_shop_homepage');
+        }
         $dateFormated = $request->getSession()->get('visitDate');
         $number = $request->getSession()->get('number');
         $type = $request->getSession()->get('type');
@@ -120,6 +123,9 @@ class ShopController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($order);
                 $em->flush();
+                $request->getSession()->remove("visitDate");
+                $request->getSession()->remove("number");
+                $request->getSession()->remove("type");
                 $request->getSession()->set('orderNumber', $order->getId());
                 return $this->redirectToRoute('seb_undefined_shop_checkout');
             }

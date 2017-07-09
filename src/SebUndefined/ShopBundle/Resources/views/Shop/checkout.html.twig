@@ -57,6 +57,19 @@
                 {% endfor %}
             </div>
             <div class="col-md-4 col-sm-6 col-xs-12">
+                <h3>Paiement</h3>
+                <p>Payer maintenant et recevez bos billets par email !</p>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Nombre de billet</th>
+                        <td>{{ order.tickets|length }}</td>
+                    </tr>
+                    <tr>
+                        <th>Prix total</th>
+                        <td>{{ order.price }} €</td>
+                    </tr>
+
+                </table>
                 <form action="{{ path('seb_undefined_shop_final') }}" method="POST">
                     <script
                             src="https://checkout.stripe.com/checkout.js" class="stripe-button"

@@ -32,7 +32,7 @@
     </p>
     <ul>
         <li>
-            Numéro de commande : {{ order.price }}
+            Numéro de commande : {{ order.id }}
         </li>
         <li>
             Date de la commande : {{ order.date|date("d/m/Y") }}
@@ -73,6 +73,14 @@
         </tr>
         {% endfor %}
     </table>
+    <p style="text-align: center">
+        <strong>Pour toutes questions ou modification de commande:</strong>
+        <p>
+        <strong>Musée du Louvre</strong><br/>
+        Tel : <a href="tel:+33778246403">+33 7 78 24 64 03</a>
+
+        </p>
+    </p>
 </div>
 </body>
 </html>

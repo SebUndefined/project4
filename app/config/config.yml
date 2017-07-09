@@ -69,5 +69,5 @@ swiftmailer:
     username: 'louvreproject4@gmail.com'
     port: '587'
     encryption: 'tls'
-    password: ''
+    password: 'Project4/22'
     spool: { type: memory }
