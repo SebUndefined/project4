@@ -1,0 +1,12 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: 127.0.0.1
+    database_port: 3306
+    database_name: c1project4
+    database_user: c1project4
+    database_password: _hxWMkRkC2Sf2
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 9b8635c7fa3c3f2f08c7a7e389f1e1ac3dff4146
