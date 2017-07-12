@@ -28,6 +28,9 @@ class DefinePrice
                 $price = 12;
             }
         }
+        if ($type == "half") {
+            $price = $price / 2;
+        }
         return $price;
     }
 }

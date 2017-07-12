@@ -2,6 +2,7 @@
 
 namespace SebUndefined\ShopBundle\Repository;
 
+
 /**
  * TicketRepository
  *
@@ -12,11 +13,14 @@ class TicketRepository extends \Doctrine\ORM\EntityRepository
 {
     public function countTicketForDay ($date, $number)
     {
+
         return $this->createQueryBuilder('t')
-            ->select('COUNT(t)')
+            ->select('COUNT(t) as nbTicket')
+            ->from('SebUndefinedShopBundle:OrderMuseum', 'orderMuseum')
+            ->innerJoin('orderMuseum.tickets', 'tickets')
             ->where('t.day = :day')
-            ->setParameter('day', $date->format('Y-m-d'))
-            //->setParameter('isComplete', false)
+            ->andWhere('orderMuseum.complete = :complete')
+            ->setParameters(array('day'=> $date->format('Y-m-d'), 'complete' => true) )
             ->getQuery()
             ->getSingleScalarResult();
     }
