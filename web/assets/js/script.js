@@ -3,21 +3,22 @@
  */
 $(function() {
     var dateToday = new Date();
-    console.log(dateToday);
     function checkPossibleType (dateText) {
         console.log(dateText);
         var splitDate = dateText.split("/");
         var dateSelected = new Date(splitDate[2], splitDate[1]-1, splitDate[0]);
         if (dateSelected.toDateString() === dateToday.toDateString())
         {
-            if (new Date().getHours() > 14)
+            console.log(new Date().getHours());
+            if (new Date().getHours() >= 14)
             {
-                $('#home_type option[value="full"]').attr('disabled', true);
-                $('#home_type option[value="half"]').attr('selected', true);
+                console.log("Should be desactivated");
+                $('#home_type option[value="full"]').prop('disabled', true);
+                $('#home_type option[value="half"]').prop('selected', true);
             }
         }
         else {
-            console.log("Should be activated")
+            console.log("Should be activated");
             $('#home_type option[value="full"]').prop('disabled', false);
         }
 
