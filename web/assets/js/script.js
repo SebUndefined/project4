@@ -10,15 +10,15 @@ $(function() {
         var dateSelected = new Date(splitDate[2], splitDate[1]-1, splitDate[0]);
         if (dateSelected.toDateString() === dateToday.toDateString())
         {
-            if (new Date().getHours() > 14)
+            if (new Date().getHours() > 8)
             {
                 $('#home_type option[value="full"]').attr('disabled', true);
                 $('#home_type option[value="half"]').attr('selected', true);
             }
         }
         else {
-            $('#order_museum_type option[value="full"]').attr('disabled', false);
-            $('#order_museum_type option[value="half"]').attr('selected', false);
+            console.log("Should be activated")
+            $('#home_type option[value="full"]').prop('disabled', false);
         }
 
         console.log(dateSelected);
