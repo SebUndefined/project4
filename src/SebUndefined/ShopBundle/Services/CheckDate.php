@@ -59,7 +59,7 @@ class CheckDate
             return false;
         }
         $dayYear = $date->format('dm');
-        if ($dayYear === 0105 || $dayYear === 0111 || $dayYear === 2512) {
+        if ($dayYear === '0105' || $dayYear === '0111' || $dayYear === '2512') {
             return false;
         }
         return true;

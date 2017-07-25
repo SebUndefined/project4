@@ -3,6 +3,7 @@
 namespace Tests\AppBundle\Controller;
 
 use SebUndefined\ShopBundle\Services\CheckDate;
+use SebUndefined\ShopBundle\Services\DefinePrice;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -47,5 +48,13 @@ class DefaultControllerTest extends KernelTestCase
         $dateAsDateType = \DateTime::createFromFormat('d/m/Y', $date);
         $result = $serviceDate->isNotAtClosedDay($dateAsDateType);
         $this->assertEquals(true, $result);
+    }
+    public function testPrice() {
+
+        $service = new DefinePrice();
+        $birthDate = "22/10/1988";
+        $birthDateAsDate = \DateTime::createFromFormat('d/m/Y', $birthDate);
+        $result = $service->definePriceTicket($birthDateAsDate, "full", false);
+        $this->assertEquals(16, $result);
     }
 }

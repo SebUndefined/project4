@@ -111,11 +111,9 @@ class ShopController extends Controller
                     ->setPrice(
                         $this->container->get('seb_undefined_shop.services.define_price')
                             ->definePriceTicket(
-                                $order->getTickets()
-                                ->get($i)->getBirthdate(),
+                                $order->getTickets()->get($i)->getBirthdate(),
                                 $type,
-                                $order->getTickets()
-                                ->get($i)->getDiscountTicket())
+                                $order->getTickets()->get($i)->getDiscountTicket())
                     );
             }
             $order->setPrice($order->getPrice());
